@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import fetch from 'isomorphic-unfetch'
 import CityResponse from '../components/CityResponse';
 import City from '../components/City';
+import Map from '../components/Map';
 
 function AppContainer(props) {
 

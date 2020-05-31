@@ -1,4 +1,4 @@
-
+;
 var express = require('express');
 var router = express.Router();
 var REQUEST = require('request');
@@ -15,7 +15,7 @@ exports.getWeather = function(req, res) {
 		return res.status(400).send('city missing');
 	}
 
-	var aurl = OPENWEATHERURL + 'q=' + city + '&appid=6b7b471967dd0851d0010cdecf28f829&units=imperial';
+	var aurl = OPENWEATHERURL + 'q=' + city + ',NZ&appid=6b7b471967dd0851d0010cdecf28f829&units=imperial';
 
 	request({
 		method: 'GET',
@@ -27,7 +27,11 @@ exports.getWeather = function(req, res) {
     		//console.error("Failed to send request to openweathermap.org", err);
     	} else {
     		if(body.cod === 200) {
-    			var weath = "Conditions are " + body.weather[0].main + " and temperature is " + body.main.temp + ' F';
+    			//Sets a pin on the location that 
+    			var location = {lat: body.coord.lat, lng: body.coord.lon};
+    			var map = document.getElementById('map');
+	  			var marker = new google.maps.Marker({position: location, map: map});
+    			var weath = "Conditions are " + body.weather[0].main + " and temperature is " + body.main.temp + ' °C';
     			var response = {city: body.name, weather: weath};
     			return res.status(200).send(response);
     		} else {
