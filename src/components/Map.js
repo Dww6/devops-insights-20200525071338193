@@ -10,7 +10,7 @@ function Map() {
 	  }
 	</script>
  	<script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaYw3FQdv6bXgjgzbDlKfX1WeolDTkGGg&callback=initMap">;);
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaYw3FQdv6bXgjgzbDlKfX1WeolDTkGGg&callback=initMap">);
 }
   
 export default Map

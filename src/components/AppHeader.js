@@ -2,9 +2,9 @@ import React from 'react';
 
 function AppHeader() {
 
-    return <div>
+    return (<div>
         <p className="p-3 text-light h3 bg-primary">Current weather by NZ city name</p>
-    </div>
+    </div>);
 }
   
 export default AppHeader

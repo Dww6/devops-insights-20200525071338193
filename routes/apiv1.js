@@ -15,7 +15,7 @@ exports.getWeather = function(req, res) {
 		return res.status(400).send('city missing');
 	}
 
-	var aurl = OPENWEATHERURL + 'q=' + city + ',NZ&appid=6b7b471967dd0851d0010cdecf28f829&units=imperial';
+	var aurl = OPENWEATHERURL + 'q=' + city + ',NZ&appid=6b7b471967dd0851d0010cdecf28f829&units=metric';
 
 	request({
 		method: 'GET',
