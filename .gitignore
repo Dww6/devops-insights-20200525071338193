@@ -5,6 +5,7 @@ screenshots
 tests/coverage
 .nyc_output
 .DS_Store
+.env
 
 junitfvt.xml
 chromedriver.log
