@@ -2,6 +2,7 @@ import React from 'react';
 
 function Map() {
 	return(
+	 <div>
 	    <div id="map"></div>
 	    <script>
     	  function initMap() {
@@ -10,6 +11,7 @@ function Map() {
     	  }
     	</script>
      	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSCFLkh3OK6sF0Mfo3h_89K_aFrkS58wA&callback=initMap"></script>
+     </div>
 	);
 }
   
