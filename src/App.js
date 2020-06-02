@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AppHeader from './components/AppHeader';
 import AppContainer from './containers/AppContainer';
 import './App.css';
-import Map from '../components/Map';
+import Map from './components/Map';
 
 function App() {
   return (
