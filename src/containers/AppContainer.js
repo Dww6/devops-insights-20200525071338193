@@ -39,7 +39,7 @@ function AppContainer(props) {
             <Map onCityChange={responseData} clearResponse={clearResponse}/>
             <div></div>
         </div> 
-     <div>
+     </div>
     );
 }
   
