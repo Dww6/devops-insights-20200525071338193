@@ -21,7 +21,6 @@ function AppContainer(props) {
     }
 
     return (
-    <div>
         <div>
             <div className="row mt-4">
                 <div className="col-sm-4"></div>
@@ -34,12 +33,6 @@ function AppContainer(props) {
                 <div className="col-sm-2"></div>
             </div>
         </div>
-        <div className="row mt-4">
-            <div></div>
-            <Map onCityChange={responseData} clearResponse={clearResponse}/>
-            <div></div>
-        </div> 
-     </div>
     );
 }
   
