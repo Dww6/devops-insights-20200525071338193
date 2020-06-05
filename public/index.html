@@ -22,12 +22,35 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+        <style>
+    #map {
+      height: 100%;
+    }
+    #root{
+      height: 100%;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
     <title>Demo DOI</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root">
     </div>
+    <script>
+	  function initMap() {
+	    var location = {lat: -37.78, lng: 175.28};
+   	  var map = new google.maps.Map(document.getElementById('map'), {zoom: 14, center: location});
+	  }
+	</script>
+     	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSCFLkh3OK6sF0Mfo3h_89K_aFrkS58wA&callback=initMap"></script></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

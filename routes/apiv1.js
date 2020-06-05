@@ -26,10 +26,6 @@ exports.getWeather = function(req, res) {
     		//console.error("Failed to send request to openweathermap.org", err);
     	} else {
     		if(body.cod === 200) {
-    			//Sets a pin on the location that 
-    			var location = {lat: body.coord.lat, lng: body.coord.lon};
-    			var map = document.getElementById('map');
-	  			var marker = new google.maps.Marker({position: location, map: map});
     			var weath = "Conditions are " + body.weather[0].main + " and temperature is " + body.main.temp + ' °C';
     			var response = {city: body.name, weather: weath};
     			return res.status(200).send(response);
