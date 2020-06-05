@@ -12,6 +12,10 @@ function AppContainer(props) {
         const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue},NZ&appid=6b7b471967dd0851d0010cdecf28f829&units=metric`)
         const json = await res.json()
         console.log(json);
+        //Sets a pin on the location that 
+		var location = {lat: json.coord.lat, lng: json.coord.lon};
+		var map = document.getElementById('map');
+		var marker = new google.maps.Marker({position: location, map: map});
         setResponseData(json);
     }
 
