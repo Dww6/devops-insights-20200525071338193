@@ -9,7 +9,7 @@ function AppContainer(props) {
 
     const handleCityChange = async (cityValue) => {
         //console.log(`--------- fetchData called city:${cityValue}`)
-        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=6b7b471967dd0851d0010cdecf28f829&units=metric`)
+        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue},NZ&appid=6b7b471967dd0851d0010cdecf28f829&units=metric`)
         const json = await res.json()
         console.log(json);
         setResponseData(json);
